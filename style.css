@@ -1,0 +1,24 @@
+/* Estilos títulos e textos */
+
+.coreletra {
+    color: rgb(48, 71, 48);
+    background-color: rgba(156, 187, 159, 0.493)!important;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.paragrafos {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    color: black;
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Estilo rodape */
+
+.rodape {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    text-align: center;
+    font-size: 16px;
+}
+
+
