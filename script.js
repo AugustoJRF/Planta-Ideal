@@ -1,35 +1,51 @@
 
-function PlantaIdeal() {
+function idealPlant() {
  
-    let resp1 = document.forms.formulario.elements.customRadioInline1.value;    
-    let resp2 = document.forms.formulario.elements.customRadioInline5.value;
-    let resp3 = document.forms.formulario.elements.customRadioInline3.value;
+    let answer1 = document.forms.questions.elements.customRadioInline1.value;    
+    let answer2 = document.forms.questions.elements.customRadioInline5.value;
+    let answer3 = document.forms.questions.elements.customRadioInline3.value;
 
-    if (resp1 == 1 && resp2 == 1 && resp3 == 1) { // Caso todas as resp sejam S.
-        document.getElementById('resultado').innerHTML = "<p><b>Onze-Horas:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Excelente planta para qualquer tipo de vaso.</p> <p><b>Aspargo-Alfinete:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p> <p><b>Falsa Hortelã:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta períodos de seca, regar quando o solo estiver seco. Perfeita para vasos suspensos.</p> <p><b>Gerânio:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Planta para qualquer tipo de vaso.</p>"
+    const mossRose = '<p><b>Moss Rose:</b> It should be grown in full sun. Watering should be moderate, keeping the soil slightly moist. Excellent plant for any type of pot.</p>';
+    const asparagusSprengeri = '<p><b>Asparagus Sprengeri:</b> It should be grown in full sun. Watering should be moderate, keeping the soil slightly moist. Perfect for hanging pots.</p>';
+    const plectranthusIncense = '<p><b>Plectranthus Incense:</b> It can be grown in full sun or partial shade. It tolerates dry periods, water when the soil is dry. Perfect for hanging pots.</p>';
+    const dracaenaTrifasciata = '<p><b>Dracaena Trifasciata:</b> It can be grown in full sun or partial shade. It tolerates long periods of drought, water when the soil is dry. Great to have in pots and flower beds.</p>';
+    const geranium = '<p><b>Geranium:</b> It should be grown in full sun. Watering should be moderate, keeping the soil slightly moist. Plant suitable for any type of pot.</p>';
+    const spiderPlant = "<p><b>Spider Plant:</b> It should be grown in partial shade. Watering should be spaced out, it doesn't like waterlogged soil. Suitable for any type of pot.</p>";
+    const hydrangea = "<p><b>Hydrangea:</b> It should be grown in partial shade, receiving some morning or late afternoon sun. It's important to keep the soil moist. Suitable for pots, flower beds, and directly in the ground.</p>";
+    const peperomiaScandens = '<p><b>Peperomia Scandens:</b> It should be grown in partial shade. Watering should be moderate, keeping the soil slightly moist. Perfect for hanging pots.</p>';
+    const croton = '<p><b>Croton:</b> It should be grown in full sun. Watering should be moderate, keeping the soil moist. Suitable for pots, flower beds, and directly in the ground.</p>';
+    const rose = '<p><b>Rose:</b> It should be grown in full sun. Watering should be frequent, keeping the soil moist. Great to have in pots and directly in the ground.</p>';
+    const holly = '<p><b>Holly:</b> It should be grown in partial shade, receiving some morning or late afternoon sun. Watering should be moderate, keeping the soil slightly moist. Suitable for pots, flower beds, and directly in the ground.</p>';
+    const tradescantiaZebrina = '<p><b>Tradescantia zebrina:</b> It should be grown in partial shade. Watering should be moderate, keeping the soil slightly moist. Suitable for any type of pot.</p>';
+    const swedishIvy = '<p><b>Swedish Ivy:</b> It should be grown in partial shade. Watering should be frequent, keeping the soil moist. Perfect for hanging pots.</p>';
+    const goldenPothos = '<p><b>Golden Pothos:</b> It should be grown in partial shade. Watering should be moderate, keeping the soil slightly moist. Perfect for hanging pots.</p>';
+    const basketFern = '<p><b>Basket Fern:</b> It should be grown in partial shade. Watering should be frequent, keeping the soil moist. Perfect for hanging pots.</p>';
+
+    if (answer1 == 1 && answer2 == 1 && answer3 == 1) { // Scenario all Yes.
+        document.getElementById('plantsresults').innerHTML = mossRose + asparagusSprengeri + plectranthusIncense +geranium;
         
-    } else if (resp1 == 1 && resp2 == 1 && resp3 == 2) { // Caso S,S,N.
-        document.getElementById('resultado').innerHTML = "<p><b>Falsa Hortelã:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta períodos de seca, regar quando o solo estiver seco. Perfeita para vasos suspensos.</p> <p><b>Espada de São Jorge:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta longos períodos de seca, regar quando o solo estiver seco. Ótima para se ter em vasos e canteiros.</p> <p><b>Aspargo-Alfinete:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p> <p><b>Gerânio:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Planta para qualquer tipo de vaso.</p> <p><b>Onze-Horas:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Excelente planta para qualquer tipo de vaso.</p>"
+    } else if (answer1 == 1 && answer2 == 1 && answer3 == 2) { // Scenario Yes, Yes, No.
+        document.getElementById('plantsresults').innerHTML = plectranthusIncense + dracaenaTrifasciata + asparagusSprengeri + geranium + mossRose;
 
-    } else if (resp1 == 1 && resp2 == 2 && resp3 == 1) { // Caso S,N,S.
-        document.getElementById('resultado').innerHTML = "<p><b>Falsa Hortelã:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta períodos de seca, regar quando o solo estiver seco. Perfeita para vasos suspensos.</p> <p><b>Gerânio:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Planta para qualquer tipo de vaso.</p> <p><b>Onze-Horas:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Excelente planta para qualquer tipo de vaso. <p><b>Aspargo-Alfinete:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p>"
+    } else if (answer1 == 1 && answer2 == 2 && answer3 == 1) { // Scenario Yes, No, Yes.
+        document.getElementById('plantsresults').innerHTML = plectranthusIncense + geranium + mossRose + asparagusSprengeri
 
-    } else if (resp1 == 1 && resp2 == 2 && resp3 == 2) { // Caso S,N,N.
-        document.getElementById('resultado').innerHTML = "<p><b>Falsa Hortelã:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta períodos de seca, regar quando o solo estiver seco. Perfeita para vasos suspensos.</p> <p><b>Gerânio:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Planta para qualquer tipo de vaso.</p> <p><b>Cróton:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo úmido. Planta para vasos, canteiros e diretamente no solo.</p> <p><b>Roseira:</b> Deve ser cultivada a sol pleno. Regas devem ser frequentes, manter solo úmido. Ótima para se ter em vasos e diretamente no solo. <p><b>Onze-Horas:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Excelente planta para qualquer tipo de vaso.</p> <p><b>Aspargo-Alfinete:</b> Deve ser cultivada a sol pleno. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p> <p><b>Espada de São Jorge:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta longos períodos de seca, regar quando o solo estiver seco. Ótima para se ter em vasos e canteiros."
+    } else if (answer1 == 1 && answer2 == 2 && answer3 == 2) { // Scenario Yes, No, No.
+        document.getElementById('plantsresults').innerHTML = plectranthusIncense + geranium + croton + rose + mossRose + asparagusSprengeri + dracaenaTrifasciata;
 
-    } else if (resp1 == 2 && resp2 == 1 && resp3 == 1) { //Caso N,S,S.
-        document.getElementById('resultado').innerHTML = "<p><b>Clorofito:</b> Deve ser cultivada a meia sombra. Regas devem ser espaçadas, não gosta de solos encharcados. Planta para qualquer tipo de vaso.</p> <p><b>Peperômia-Filodendro:</b> Deve ser cultivada a meia sombra. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p> <p><b>Jibóia:</b> Deve ser cultivada a meia sombra. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p> <p><b>Falsa Hortelã:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta períodos de seca, regar quando o solo estiver seco. Perfeita para vasos suspensos.</p>"
+    } else if (answer1 == 2 && answer2 == 1 && answer3 == 1) { // Scenario No, Yes, Yes.
+        document.getElementById('plantsresults').innerHTML = spiderPlant + peperomiaScandens + goldenPothos + plectranthusIncense;
 
-    } else if (resp1 == 2 && resp2 == 1 && resp3 == 2) { //Caso N,S,N.
-        document.getElementById('resultado').innerHTML = "<p><b>Falsa Hortelã:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta períodos de seca, regar quando o solo estiver seco. Perfeita para vasos suspensos.</p> <p><b>Peperômia-Filodendro:</b> Deve ser cultivada a meia sombra. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p> <p><b>Jibóia:</b> Deve ser cultivada a meia sombra. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p> <p><b>Espada de São Jorge:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta longos períodos de seca, regar quando o solo estiver seco. Ótima para se ter em vasos e canteiros.</p> <p><b>Clorofito:</b> Deve ser cultivada a meia sombra. Regas devem ser espaçadas, não gosta de solos encharcados. Planta para qualquer tipo de vaso.<p> <p><b>Azevinho:</b> Deve ser cultivada a meia sombra, recebendo um pouco do sol da manhã ou final da tarde. Regas devem ser moderadas, manter solo levemente úmido. Planta para vasos, canteiros e diretamente no solo.</p>";
+    } else if (answer1 == 2 && answer2 == 1 && answer3 == 2) { //Scenario No, Yes, No.
+        document.getElementById('plantsresults').innerHTML = plectranthusIncense + peperomiaScandens + goldenPothos + dracaenaTrifasciata + spiderPlant + holly;
 
-    } else if (resp1 == 2 && resp2 == 2 && resp3 == 1) { // Caso N,N,S.
-        document.getElementById('resultado').innerHTML = "<p><b>Clorofito:</b> Deve ser cultivada a meia sombra. Regas devem ser espaçadas, não gosta de solos encharcados. Planta para qualquer tipo de vaso.</p> <p><b>Dólar:</b> Deve ser cultivada a meia sombra. Regas devem ser frequentes, manter solo úmido. Perfeita para vasos suspensos.</p> <p><b>Falsa Hortelã:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta períodos de seca, regar quando o solo estiver seco. Perfeita para vasos suspensos.</p> <p><b>Jibóia:</b> Deve ser cultivada a meia sombra. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p> <p><b>Peperômia-Filodendro:</b> Deve ser cultivada a meia sombra. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p> <p><b>Lambari:</b> Deve ser cultivada a meia sombra. Regas devem ser moderadas, manter solo levemente úmido. Planta para qualquer tipo de vaso.</p> <p><b>Samambaia Jamaica:</b> Deve ser cultivada a meia sombra. Regas devem ser frequentes, manter solo úmido. Perfeita para vasos suspensos.</p>"
+    } else if (answer1 == 2 && answer2 == 2 && answer3 == 1) { // Scenario No, No, Yes.
+        document.getElementById('plantsresults').innerHTML = spiderPlant + swedishIvy + plectranthusIncense + goldenPothos + peperomiaScandens + tradescantiaZebrina + basketFern;
 
-    } else if (resp1 == 2 && resp2 == 2 && resp3 == 2) { // Caso todas as resp sejam N.
-        document.getElementById('resultado').innerHTML = "<p><b>Clorofito:</b> Deve ser cultivada a meia sombra. Regas devem ser espaçadas, não gosta de solos encharcados. Planta para qualquer tipo de vaso.</p> <p><b>Falsa Hortelã:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta períodos de seca, regar quando o solo estiver seco. Perfeita para vasos suspensos.</p> <p><b>Hortênsia:</b> Deve ser cultivada a meia sombra, recebendo um pouco do sol da manhã ou final da tarde. Importante manter o solo úmido. Planta para vasos, canteiros e diretamente no solo.</p> <p><b>Peperômia-Filodendro:</b> Deve ser cultivada a meia sombra. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p> <p><b>Azevinho:</b> Deve ser cultivada a meia sombra, recebendo um pouco do sol da manhã ou final da tarde. Regas devem ser moderadas, manter solo levemente úmido. Planta para vasos, canteiros e diretamente no solo.</p> <p><b>Lambari:</b> Deve ser cultivada a meia sombra. Regas devem ser moderadas, manter solo levemente úmido. Planta para qualquer tipo de vaso.</p> <p><b>Espada de São Jorge:</b> Pode ser cultivada a sol pleno ou meia sombra. Suporta longos períodos de seca, regar quando o solo estiver seco. Ótima para se ter em vasos e canteiros.</p> <p><b>Samambaia Jamaica:</b> Deve ser cultivada a meia sombra. Regas devem ser frequentes, manter solo úmido. Perfeita para vasos suspensos.</p> <p><b>Dólar:</b> Deve ser cultivada a meia sombra. Regas devem ser frequentes, manter solo úmido. Perfeita para vasos suspensos.</p> <p><b>Jibóia:</b> Deve ser cultivada a meia sombra. Regas devem ser moderadas, manter solo levemente úmido. Perfeita para vasos suspensos.</p>"
+    } else if (answer1 == 2 && answer2 == 2 && answer3 == 2) { // Scenario all No.
+        document.getElementById('plantsresults').innerHTML = spiderPlant + plectranthusIncense + hydrangea + peperomiaScandens + holly + tradescantiaZebrina + dracaenaTrifasciata + basketFern + swedishIvy + goldenPothos;
    
     } else {
-        document.getElementById('resultado').innerHTML = "<p><b>Por favor, responda as 3 perguntas...</b></p>"
+        document.getElementById('plantsresults').innerHTML = "<p><b>Please, answer all the statements.</b></p>"
         }   
-    } 
+    }
