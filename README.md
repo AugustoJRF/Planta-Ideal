@@ -13,4 +13,4 @@ Fifteen species of ornamental plants are presented. At the bottom of the page, t
 - Bootstrap
 - JavaScript
 
-**Link to the website:** https://augustojrf.github.io/Planta-Ideal/
+**Link to the website:** https://augustojrf.github.io/The-Ideal-Plant/
